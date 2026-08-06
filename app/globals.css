@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@layer base {
+  :root {
+    --background: #fafafa;
+    --foreground: #0a0a0a;
+  }
+  
+  .dark {
+    --background: #0a0a0a;
+    --foreground: #fafafa;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+}
+
+/* Hide scrollbar for clean UI but allow scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
